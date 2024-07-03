@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/layered_back">
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="#1A8CA5"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:background="@drawable/editback"
+        android:ems="14"
+        android:hint="Email"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="#CCFFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="14"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:background="@drawable/editback"
+        android:inputType="text"
+        android:hint="Password"
+        android:textColor="@color/white"
+        android:textColorHint="#CCFFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/etemail"
+        app:layout_constraintStart_toStartOf="@+id/etemail"
+        app:layout_constraintTop_toBottomOf="@+id/etemail" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/btngreen"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/etpass"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/etpass"
+        app:layout_constraintTop_toBottomOf="@+id/etpass" />
+
+    <ImageButton
+        android:id="@+id/btnsetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="#1A8CA5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_settings_applications_24" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="#1A8CA5"
+        app:layout_constraintBottom_toBottomOf="@+id/btnsetting"
+        app:layout_constraintEnd_toStartOf="@+id/btnsetting"
+        app:layout_constraintTop_toTopOf="@+id/btnsetting"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/baseline_sd_storage_24" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnmap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:background="@drawable/btngreen"
+        android:text="Map"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btngreen"
+        android:padding="15dp"
+        android:text="Current Location"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/btnlogin"
+        app:layout_constraintStart_toStartOf="@+id/btnlogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnvolley"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btngreen"
+        android:padding="15dp"
+        android:text="Volley"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/btnlocation"
+        app:layout_constraintStart_toEndOf="@id/btnretrofit"
+        app:layout_constraintTop_toBottomOf="@+id/btnlocation" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnretrofit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btngreen"
+        android:padding="15dp"
+        android:text="Retrofit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnvolley"
+        app:layout_constraintStart_toStartOf="@+id/btnlocation"
+        app:layout_constraintTop_toBottomOf="@+id/btnlocation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
