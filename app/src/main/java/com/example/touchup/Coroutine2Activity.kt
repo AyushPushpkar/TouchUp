@@ -16,7 +16,7 @@ import kotlinx.coroutines.withTimeout
 
 class Coroutine2Activity : AppCompatActivity() {
 
-    val TAG = "CoroutineScopeActivity"
+    val TAG = "Coroutine2Activity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +44,7 @@ class Coroutine2Activity : AppCompatActivity() {
             }
         }
         runBlocking {
-            job.join()    // block code  until coroutine is finished
+            job.join()    // block main thread  until coroutine is finished
             Log.d(TAG , "Main thread is continuing ...")
         }
 
@@ -54,7 +54,7 @@ class Coroutine2Activity : AppCompatActivity() {
         val job2 = GlobalScope.launch(Dispatchers.Default) {
             Log.d(TAG , "Starting long running calculation ...")
             for(i in 30..40) {                                      // so busy with calc that it won't check for cancellation
-                if (isActive) {
+                if (isActive) {      // check for  cancellation
                     Log.d(TAG, "Result for i = $i : ${fib(i)}")
                 }
             }
@@ -68,7 +68,7 @@ class Coroutine2Activity : AppCompatActivity() {
 
         val job3 = GlobalScope.launch(Dispatchers.Default) {
             Log.d(TAG, "Starting long running calculation ...")
-            withTimeout(4000L){   // automatically cancel's job
+            withTimeout(4000L){   // delay and then automatically cancels job
                 for (i in 30..40) {
                     if (isActive) {
                         Log.d(TAG, "Result for i = $i : ${fib(i)}")
