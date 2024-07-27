@@ -63,6 +63,9 @@ dependencies {
     //glide for image
     implementation ("com.github.bumptech.glide:glide:4.16.0")
 
+    //viewmodelscope
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+
     implementation(libs.play.services.maps)
 
     testImplementation(libs.junit)

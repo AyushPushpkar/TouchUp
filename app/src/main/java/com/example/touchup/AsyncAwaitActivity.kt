@@ -44,7 +44,7 @@ class AsyncAwaitActivity : AppCompatActivity() {
                 var answer1 = async {  // whenever we want to do somethings asynchronously and get a result
                     doNetworkCall()
                 }
-                var answer2 = async {
+                var answer2 = async { // deferred<return value>
                     doNetworkCall()
                 }
                 Log.d(TAG , "Answer1 is ${answer1.await()}")  // block current coroutine until answer is available
